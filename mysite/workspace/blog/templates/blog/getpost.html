@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+{{ post.title }}
+{% endblock %}
+{% block content %}
+    <div class="post_title">{{ post.title }}</div>
+    <div class="post_author">by {{ post.author }}</div>
+    <div class="post_content">{{ post.content }}</div>
+    {% if post.link %}
+        <div class="post_link">Further reading:
+        <a href="{{ post.link }}" target="_blank">{{ post.link_desc }}c</a>
+        </div>
+    {% endif %}
+{% endblock %}
